@@ -5,12 +5,12 @@ var lint = require('./_lint');
 //////////////////////////////
 // SCSS syntax tests
 //////////////////////////////
-describe.only('no-nir - scss', function () { // eslint-disable-line
-  var file = lint.file('mixins-before-declarations.scss');
+describe.only('no-nir - scss', function () {
+  var file = lint.file('no-nir.scss');
 
   it('enforce', function (done) {
     lint.test(file, {
-      'mixins-before-declarations': 1
+      'no-nir': 1
     }, function (data) {
       lint.assert.equal(5, data.warningCount);
       done();
@@ -19,7 +19,7 @@ describe.only('no-nir - scss', function () { // eslint-disable-line
 
   it('[excludes: all]', function (done) {
     lint.test(file, {
-      'mixins-before-declarations': [
+      'no-nir': [
         1,
         {
           'exclude': [
@@ -42,7 +42,7 @@ describe.only('no-nir - scss', function () { // eslint-disable-line
   //////////////////////////////
   it('[excludes: limited]', function (done) {
     lint.test(file, {
-      'mixins-before-declarations': [
+      'no-nir': [
         1,
         {
           'exclude': [
@@ -63,11 +63,11 @@ describe.only('no-nir - scss', function () { // eslint-disable-line
 // Sass syntax tests
 //////////////////////////////
 describe('mixins before declarations - sass', function () {
-  var file = lint.file('mixins-before-declarations.sass');
+  var file = lint.file('no-nir.sass');
 
   it('enforce', function (done) {
     lint.test(file, {
-      'mixins-before-declarations': 1
+      'no-nir': 1
     }, function (data) {
       lint.assert.equal(5, data.warningCount);
       done();
@@ -79,7 +79,7 @@ describe('mixins before declarations - sass', function () {
   //////////////////////////////
   it('[excludes: all]', function (done) {
     lint.test(file, {
-      'mixins-before-declarations': [
+      'no-nir': [
         1,
         {
           'exclude': [
@@ -102,7 +102,7 @@ describe('mixins before declarations - sass', function () {
   //////////////////////////////
   it('[excludes: limited]', function (done) {
     lint.test(file, {
-      'mixins-before-declarations': [
+      'no-nir': [
         1,
         {
           'exclude': [
