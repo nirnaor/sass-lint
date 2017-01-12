@@ -1,13 +1,14 @@
-@mixin no-content() {
+@mixin mixin-without-content-should-be-first() {
     right: 4px;
 }
-@mixin button-hover($name, $part: null) {
+
+@mixin mixing-with-content-should-be-second($name, $part: null) {
     .nir {
         @content;
     }
 }
 
-.nir {
+.ruleset-should-be-last {
     top: 0;
     @include button-hover(top-bar-button-content) {
         g {
@@ -18,4 +19,3 @@
         }
     }
 }
-
