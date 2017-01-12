@@ -5,9 +5,9 @@ var lint = require('./_lint');
 var testCases = [
   { warningCount: 0, options: { order: [] } },
   { warningCount: 0, options: {} },
-  { warningCount: 0, options: { order: ['includeWithoutBlock', 'declaration', 'includeWithBlock'] } },
-  { warningCount: 1, options: { order: ['declaration', 'includeWithoutBlock', 'includeWithBlock'] } },
-  { warningCount: 2, options: { order: ['includeWithBlock', 'declaration', 'includeWithoutBlock'] } }
+  { warningCount: 0, options: { order: ['includeWithoutBlock', 'identDeclaration', 'includeWithBlock'] } },
+  { warningCount: 1, options: { order: ['identDeclaration', 'includeWithoutBlock', 'includeWithBlock'] } },
+  { warningCount: 2, options: { order: ['includeWithBlock', 'identDeclaration', 'includeWithoutBlock'] } }
 ];
 
 var fileTypes = ['scss', 'sass'];
