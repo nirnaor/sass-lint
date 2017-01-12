@@ -1,14 +1,5 @@
-@mixin mixin-without-content-should-be-first() {
-    right: 4px;
-}
-
-@mixin mixing-with-content-should-be-second($name, $part: null) {
-    .nir {
-        @content;
-    }
-}
-
-.ruleset-should-be-last {
+.a-random-rule-set {
+    @include button-asdsa()
     top: 0;
     @include button-hover(top-bar-button-content) {
         g {
