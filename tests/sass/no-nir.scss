@@ -1,4 +1,5 @@
 .a-random-rule-set {
+    $size: 5px;
     @include button-asdsa()
     top: 0;
     @include button-hover(top-bar-button-content) {
