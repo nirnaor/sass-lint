@@ -26,15 +26,5 @@ fileTypes.forEach(function (fileType) {
         });
       });
     });
-
-    it('enforce', function (done) {
-      lint.test(file, {
-        'no-nir': 1
-      }, function (data) {
-        lint.assert.equal(0, data.warningCount);
-        done();
-      });
-    });
-
   });
 });
