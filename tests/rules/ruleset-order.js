@@ -13,13 +13,13 @@ var testCases = [
 var fileTypes = ['scss', 'sass'];
 
 fileTypes.forEach(function (fileType) {
-  describe.only('no-nir - ' + fileType, function () {
-    var file = lint.file('no-nir.' + fileType);
+  describe.only('ruleset-order - ' + fileType, function () {
+    var file = lint.file('ruleset-order.' + fileType);
 
     testCases.forEach(function (test) {
       it('' + test.desc, function (done) {
         lint.test(file, {
-          'no-nir': [1, test.options]
+          'ruleset-order': [1, test.options]
         }, function (data) {
           lint.assert.equal(test.warningCount, data.warningCount);
           done();
