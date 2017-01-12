@@ -62,7 +62,7 @@ describe.only('no-nir - scss', function () {
 //////////////////////////////
 // Sass syntax tests
 //////////////////////////////
-describe('mixins before declarations - sass', function () {
+describe.only('mixins before declarations - sass', function () {
   var file = lint.file('no-nir.sass');
 
   it('enforce', function (done) {
